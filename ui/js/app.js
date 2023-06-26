@@ -21,7 +21,7 @@
 
         // get stats
         nethserver.exec(
-            ["nethserver-eroidigitali/read"],
+            ["nethserver-cybersecurity/read"],
             {sections:["status", "configuration"]},
             null,
             function (success) {
@@ -62,7 +62,7 @@
         function doRead() {
             $('#config-loader').hide();
             nethserver.exec(
-                ["nethserver-eroidigitali/read"],
+                ["nethserver-cybersecurity/read"],
                 {sections:["configuration"]},
                 null,
                 function (success) {
@@ -117,7 +117,7 @@
             }}};
 
             nethserver.exec(
-                ["nethserver-eroidigitali/validate"],
+                ["nethserver-cybersecurity/validate"],
                 data,
                 null,
                 function (success) {
@@ -127,10 +127,10 @@
 
                     // update values
                     nethserver.exec(
-                        ["nethserver-eroidigitali/update"],
+                        ["nethserver-cybersecurity/update"],
                         data,
                         function (stream) {
-                            console.info("nethserver-eroidigitali", stream);
+                            console.info("nethserver-cybersecurity", stream);
                         },
                         function (success) {
                             doRead();
@@ -318,7 +318,7 @@
         nethserver.exec(
             ["system-apps/read"], {
                 action: "info",
-                name: 'nethserver-eroidigitali'
+                name: 'nethserver-cybersecurity'
             },
             null,
             function (success) {
@@ -358,6 +358,11 @@
         this.get('#/about', function (context) {
             localStorage.setItem("path", 'about');
             this.partial('views/about.html', {}, getAbout);
+        });
+
+        this.get('#/logs', function (context) {
+            localStorage.setItem("path", 'about');
+            this.partial('views/logs.html', {}, getAbout);
         });
 
         this.before('.*', function () {
