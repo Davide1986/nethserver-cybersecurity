@@ -1,0 +1,23 @@
+{
+    "id": "nethserver-cybersecurity",
+    "name": "Cybersecurity tools",
+    "summary": "Cybersecurity is an application of security",
+    "description": "Cybersecurity is an application that bundles security tools and network analysis. ",
+    "url": "",
+    "homepage": "https://github.com/Davide1986/nethserver-cybersecurity",
+    "provides": ["nethserver-cybersecurity"],
+    "release": {
+        "version": "1.0.0"
+    },
+    "tags": ["firewall", "cybersecurity", "eroidigitali", "forum", "chat" "security"],
+    "license": "GPL-3.0",
+    "bugs": {
+ "url": "https://github.com/NethServer/dev/issues"
+    },
+    "author": {
+        "name": "Davide De Rubeis",
+        "url": "https://github.com/Davide1986/nethserver-cybersecurity",
+        "email": "davide.derubeis@alpacasrl.it"
+    },
+    "icon": "logo.png"
+}

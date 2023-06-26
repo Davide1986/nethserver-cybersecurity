@@ -1,0 +1,7 @@
+*.zip
+*.log
+*.rpm
+*.tar.gz
+node_modules/
+dist/
+docs/site
