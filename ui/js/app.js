@@ -247,7 +247,7 @@
                     "action": action,
                     "lines": action == 'dump' ? 30 : null,
                     "mode": "systemd",
-                    "paths": ["eroidigitali"]
+                    "paths": ["cybersecurity"]
                 },
                 action == 'follow' ? function (stream) {
                     $('#loader').hide();
@@ -293,13 +293,13 @@
 
                 $('#follow-btn').text(_("logs_action_stop"))
                 $('#logs-output').text("")
-                $('#log-file').text("journalctl -u eroidigitali -f")
+                $('#log-file').text("journalctl -u cybersecurity -f")
             } else if (logsAction == "follow") { // dump mode
                 logsAction = 'dump'
 
                 $('#follow-btn').text(_("logs_action_follow"))
                 $('#logs-output').text("")
-                $('#log-file').text("journalctl -u eroidigitali")
+                $('#log-file').text("journalctl -u cybersecurity")
             }
             handleLogs(logsAction)
         })

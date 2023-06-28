@@ -3,8 +3,8 @@
     "priority": 10,
     "menu": {
         "index": {
-            "label": "NethServer-cybersecurity",
-            "order": 40
+            "label": "Nethserver-cybersecurity",
+            "order": 20
         }
     },
     "content-security-policy": "default-src 'self' 'unsafe-inline' 'unsafe-eval'"
